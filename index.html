@@ -1,32 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Arthur Zhao's Website</title>
+    <link rel="icon" href="az.png" type="image/png" />
     <link rel="stylesheet" href="app.css" />
   </head>
   <body>
-    <div class="container">
+    <header>
+      <h1>Arthur Zhao</h1>
+      <button id="toggleModeButton" onclick="toggleMode()">
+        Toggle Dark Mode
+      </button>
+
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container" id="home">
       <div class="blurb">
-        <h1>Hi there, I'm Arthur!</h1>
-        <p>Who am I?</p>
+        <h2>Hi there, I'm Arthur!</h2>
+        <p>Welcome to my personal website.</p>
       </div>
     </div>
-    <button onClick="alertButton()">Click Me</button>
-    <footer>
+
+    <div class="container" id="about">
+      <div class="blurb">
+        <h2>About Me</h2>
+        <p>Insert information about yourself here.</p>
+      </div>
+    </div>
+
+    <div class="container" id="projects">
+      <div class="blurb">
+        <h2>Projects</h2>
+        <p>Highlight some of your notable projects here.</p>
+      </div>
+    </div>
+
+    <div class="container" id="contact">
+      <div class="blurb">
+        <h2>Contact</h2>
+        <p>Feel free to reach out to me through the following channels:</p>
+      </div>
       <ul>
         <li>
-          <a href="mailto:arthur.zhao@duke.edu">Email</a>
+          <a href="mailto:arthur.zhao@duke.edu">Email: arthur.zhao@duke.edu</a>
         </li>
-        <li>
-          <a href="https://github.com/az-120">GitHub</a>
-        </li>
+        <li><a href="https://github.com/az-120">GitHub</a></li>
         <li>
           <a href="https://www.linkedin.com/in/arthur-zhao-7401b022a/"
             >LinkedIn</a
           >
         </li>
       </ul>
+    </div>
+
+    <footer>
+      <p>&copy; 2023 Arthur Zhao. All rights reserved.</p>
     </footer>
+
+    <script src="app.js"></script>
   </body>
-  <script src="app.js"></script>
 </html>

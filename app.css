@@ -1,7 +1,80 @@
-h1 {
-    color : cyan;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    transition: background-color 0.5s ease-in-out;
 }
 
-body {
-    background-color: lightgray;
+.light-mode {
+    background-color: cream;
+}
+
+.dark-mode {
+    background-color: #1d1d20;
+    color: silver;
+}
+
+header {
+    padding: 1rem;
+    text-align: center;
+}
+
+nav {
+    margin-top: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: silver;
+    margin: 0 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: oceanblue;
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.blurb {
+    text-align: center;
+}
+
+h1, h2 {
+    color: #9D85DE;
+}
+
+button {
+    background-color: oceanblue;
+    color: silver;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: slate;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+}
+
+footer p {
+    margin: 0;
 }
