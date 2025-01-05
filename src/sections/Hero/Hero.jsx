@@ -51,7 +51,7 @@ function Hero() {
             <img src={linkedinIcon} alt="LinkedIn Icon" />
           </a>
         </span>
-        <p>Blah blah blah</p>
+        <p className={styles.description}>Blah blah blah</p>
       </div>
     </section>
   );
