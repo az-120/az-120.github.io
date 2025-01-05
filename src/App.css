@@ -21,7 +21,7 @@ body {
   margin: 0 auto 60px;
 }
 
-root {
+#root {
   display: flex;
   flex-direction: column;
   gap: 60px;
