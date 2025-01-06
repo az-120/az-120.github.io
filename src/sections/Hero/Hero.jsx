@@ -1,3 +1,5 @@
+import React from "react";
+import {useTypewriter, Cursor} from "react-simple-typewriter";
 import styles from "./HeroStyles.module.css";
 import heroImg from "../../assets/hero-img.jpg";
 import sun from "../../assets/sun.svg";
@@ -17,6 +19,16 @@ function Hero() {
   const twitterIcon = theme === "light" ? twitterLight : twitterDark;
   const githubIcon = theme === "light" ? githubLight : githubDark;
   const linkedinIcon = theme === "light" ? linkedinLight : linkedinDark;
+
+  const [text] = useTypewriter({
+    words: ["Software Engineer", "Data Scientist", "CS Student @ Duke"],
+    loop: true,
+    typeSpeed: 100,
+    deleteSpeed: 80,
+    delaySpeed: 1000,
+  });
+
+  console.log(text);
 
   return (
     <section id="hero" className={styles.container}>
@@ -39,19 +51,26 @@ function Hero() {
           <br />
           Zhao
         </h1>
-        <h2>I am a ...</h2>
+        <h2>I'm a...</h2>
+        <div className="typewriter">
+          <span style={{fontWeight: "bold", color: "blue"}}>
+            &nbsp;
+            {text}
+            {/* <Cursor /> */}
+          </span>
+        </div>
+
         <span>
+          <a href="https://linkedin.com/in/arthurdezhao" target="_blank">
+            <img src={linkedinIcon} alt="LinkedIn Icon" />
+          </a>
           <a href="https://instagram.com/arthvrzhao" target="_blank">
             <img src={twitterIcon} alt="Twitter Icon" />
           </a>
           <a href="https://github.com/az-120" target="_blank">
             <img src={githubIcon} alt="Gwitter Icon" />
           </a>
-          <a href="https://linkedin.com/in/arthurdezhao" target="_blank">
-            <img src={linkedinIcon} alt="LinkedIn Icon" />
-          </a>
         </span>
-        <p className={styles.description}>Blah blah blah</p>
       </div>
     </section>
   );
