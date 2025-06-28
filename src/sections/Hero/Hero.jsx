@@ -1,5 +1,5 @@
 import React from "react";
-import {useTypewriter, Cursor} from "react-simple-typewriter";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
 import styles from "./HeroStyles.module.css";
 import heroImg from "../../assets/hero-img.png";
 import sun from "../../assets/sun.svg";
@@ -10,10 +10,10 @@ import githubLight from "../../assets/github-light.svg";
 import githubDark from "../../assets/github-dark.svg";
 import linkedinLight from "../../assets/linkedin-light.svg";
 import linkedinDark from "../../assets/linkedin-dark.svg";
-import {useTheme} from "../../common/ThemeContext";
+import { useTheme } from "../../common/ThemeContext";
 
 function Hero() {
-  const {theme, toggleTheme} = useTheme();
+  const { theme, toggleTheme } = useTheme();
 
   const themeIcon = theme === "light" ? sun : moon;
   const mailIcon = theme === "light" ? mailLight : mailDark;
@@ -21,7 +21,12 @@ function Hero() {
   const linkedinIcon = theme === "light" ? linkedinLight : linkedinDark;
 
   const [text] = useTypewriter({
-    words: ["Software Engineer", "Data Scientist", "CS Student @ Duke"],
+    words: [
+      "Software Engineer",
+      "Data Driven Developer",
+      "ML Enthusiast",
+      "CS Student @ Duke",
+    ],
     loop: true,
     typeSpeed: 100,
     deleteSpeed: 80,
@@ -46,14 +51,15 @@ function Hero() {
         />
       </div>
       <div className={styles.info}>
-        <h1>
-          Arthur
-          <br />
-          Zhao
-        </h1>
+        <h1>Arthur Zhao</h1>
         <h2>I'm a...</h2>
         <div className="typewriter">
-          <span style={{fontWeight: "bold", color: "blue"}}>
+          <span
+            style={{
+              fontWeight: "bold",
+              display: "inline",
+              whiteSpace: "nowrap",
+            }}>
             &nbsp;
             {text}
             {/* <Cursor /> */}
