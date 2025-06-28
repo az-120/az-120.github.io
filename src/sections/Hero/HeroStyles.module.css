@@ -4,8 +4,12 @@
   justify-content: center;
   gap: 100px;
   text-align: center;
-  height: 100dvh;
-  min-height: 500px;
+  min-height: 100dvh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
 
   .hero {
     max-width: 200px;
@@ -55,6 +59,10 @@
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+}
+
+.info h1 {
+  padding-top: 0;
 }
 
 @media (width >=800px) {

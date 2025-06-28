@@ -2,6 +2,12 @@
   display: flex;
   flex-direction: column;
   text-align: cetner;
+  min-height: 100dvh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
 
   img {
     max-width: 250px;
@@ -29,7 +35,7 @@
   gap: 30px;
 }
 
-@media (width >= 800px) {
+@media (width >=800px) {
   .projectsContainer {
     flex-direction: row;
     flex-wrap: wrap;
