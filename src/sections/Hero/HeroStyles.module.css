@@ -35,20 +35,6 @@
   }
 }
 
-.colorModeContainer {
-  position: relative;
-}
-
-.colorMode {
-  position: absolute;
-  right: 0;
-  width: 25px;
-}
-
-.colorMode:hover {
-  cursor: pointer;
-}
-
 .description {
   max-width: 24px;
   align-self: center;

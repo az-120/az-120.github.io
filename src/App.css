@@ -1,19 +1,23 @@
 :root {
-  --background-color: #fff;
-  --project-card-bg: #ffffff00;
-  --text-color: #222;
-  --form-text-color: #555;
-  --footer-text-color: #888;
-  --typewriter-color: #21f;
-}
-
-[data-theme="dark"] {
   --background-color: #222;
   --project-card-bg: #fff;
   --text-color: #fff;
   --form-text-color: #fff;
-  --footer-text-color: #bbb;
-  --typewriter-color: #17f;
+  --typewriter-color: #28F;
+}
+
+.App {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  color: white;
+  padding: 2rem;
 }
 
 body {
@@ -91,7 +95,7 @@ p {
   }
 
   .typewriter {
-    font-size: 15px;
+    font-size: 20px;
   }
 
   p {

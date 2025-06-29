@@ -26,3 +26,6 @@ function Projects() {
 }
 
 export default Projects;
+
+
+// Circular Gallery

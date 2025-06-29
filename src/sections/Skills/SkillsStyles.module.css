@@ -8,3 +8,33 @@
     margin: 0 auto;
     width: 100%;
 }
+
+.skillCategory h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: #12F;
+}
+
+.skillList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.skillList li {
+    background-color: var(--project-card-bg);
+    color: #12F;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-family: monospace;
+    transition: transform 0.2s ease;
+}
+
+.skillList li:hover {
+    transform: scale(1.05);
+}
