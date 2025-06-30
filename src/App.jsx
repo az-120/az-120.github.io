@@ -9,8 +9,8 @@ function App() {
   return (
     <>
       <Waves
-        lineColor="#13F"
-        backgroundColor="rgba(0,0,0,.4)"
+        lineColor="#01B"
+        backgroundColor="rgba(0,0,0,.8)"
         waveSpeedX={0.02}
         waveSpeedY={0.01}
         waveAmpX={40}
