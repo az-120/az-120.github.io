@@ -1,7 +1,6 @@
 .container {
   display: flex;
   flex-direction: column;
-  text-align: cetner;
   min-height: 100dvh;
   scroll-snap-align: start;
   scroll-snap-stop: always;
@@ -40,6 +39,25 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  /* Make cards smaller to fit 3 per row */
+  .projectsContainer>* {
+    flex: 0 0 calc(33.333% - 14px);
+    max-width: calc(33.333% - 14px);
+  }
+}
+
+@media (width >=1200px) {
+  .projectsContainer {
+    gap: 30px;
     padding: 0 30px;
+  }
+
+  .projectsContainer>* {
+    flex: 0 0 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
   }
 }
