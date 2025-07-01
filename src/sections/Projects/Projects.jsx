@@ -18,18 +18,18 @@ function Projects() {
           link='https://github.com/az-120/az-120.github.io'
         />
         <TiltedCard
-          imageSrc={LLM_ASR}
-          altText="Improving ASR with LLM on accented speech"
-          captionText="Improving ASR with LLM on accented speech"
-          displayOverlayContent={true}
-          link='https://github.com/az-120/LLM-ASR'
-        />
-        <TiltedCard
           imageSrc={hate_speech}
           altText="ML Hate Speech Detector"
           captionText="ML Hate Speech Detector"
           displayOverlayContent={true}
           link='https://github.com/az-120/HateSpeechDetector/tree/main'
+        />
+        <TiltedCard
+          imageSrc={LLM_ASR}
+          altText="Improving ASR with LLM on accented speech"
+          captionText="Improving ASR with LLM on accented speech"
+          displayOverlayContent={true}
+          link='https://github.com/az-120/LLM-ASR'
         />
       </div>
     </section>

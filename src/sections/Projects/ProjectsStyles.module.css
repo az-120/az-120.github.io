@@ -43,7 +43,6 @@
     padding: 0 20px;
   }
 
-  /* Make cards smaller to fit 3 per row */
   .projectsContainer>* {
     flex: 0 0 calc(33.333% - 14px);
     max-width: calc(33.333% - 14px);
