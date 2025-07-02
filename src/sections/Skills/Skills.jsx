@@ -1,13 +1,12 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-import styles from "./SkillsStyles.module.css";
+import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+import styles from "./SkillsStyles.module.css";
 
 import python_logo from '../../assets/python-logo.png'
 import java_logo from '../../assets/java-logo.png'
@@ -32,55 +31,48 @@ function Skills() {
   return (
     <section id="skills" className={styles.container}>
       <h1 className="sectionTitle">Skills</h1>
-      <div className={styles['swiper-center-wrapper']}>
-        <div className={styles.swiper_container}>
-          <Swiper
-            effect={'coverflow'}
-            grabCursor={true}
-            centeredSlides={true}
-            loop={true}
-            slidesPerView={'auto'}
-            coverflowEffect={coverflowEffect}
-            pagination={{ el: '.swiper-pagination', clickable: true }}
-            navigation={{
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
-              clickable: true,
-            }}
-            modules={[EffectCoverflow, Pagination, Navigation]}
-          >
-            <SwiperSlide className={styles['swiper-slide']}>
-              <img src={python_logo} alt="Python" />
-            </SwiperSlide>
-            <SwiperSlide className={styles['swiper-slide']}>
-              <img src={java_logo} alt="Java" />
-            </SwiperSlide>
-            <SwiperSlide className={styles['swiper-slide']}>
-              <img src={js_logo} alt="JavaScript" />
-            </SwiperSlide>
-            <SwiperSlide className={styles['swiper-slide']}>
-              <img src={ts_logo} alt="TypeScript" />
-            </SwiperSlide>
-            <SwiperSlide className={styles['swiper-slide']}>
-              <img src={sql_logo} alt="SQL" />
-            </SwiperSlide>
-            <SwiperSlide className={styles['swiper-slide']}>
-              <img src={react_logo} alt="React" />
-            </SwiperSlide>
-            <SwiperSlide className={styles['swiper-slide']}>
-              <img src={flask_logo} alt="Flask" />
-            </SwiperSlide>
-            <SwiperSlide className={styles['swiper-slide']}>
-              <img src={docker_logo} alt="Docker" />
-            </SwiperSlide>
-            <SwiperSlide className={styles['swiper-slide']}>
-              <img src={git_logo} alt="Git" />
-            </SwiperSlide>
-            <SwiperSlide className={styles['swiper-slide']}>
-              <img src={sklearn_logo} alt="scikit-learn" />
-            </SwiperSlide>
-          </Swiper>
-        </div>
+      <div style={{ width: '100%', maxWidth: 900, margin: '0 auto' }}>
+        <Swiper
+          effect="coverflow"
+          grabCursor={true}
+          centeredSlides={true}
+          loop={true}
+          slidesPerView={3}
+          coverflowEffect={coverflowEffect}
+          pagination={{ el: '.swiper-pagination', clickable: true }}
+          modules={[EffectCoverflow, Pagination, Navigation]}
+        >
+          <SwiperSlide className={styles['swiper-slide']}>
+            <img src={python_logo} alt="Python" />
+          </SwiperSlide>
+          <SwiperSlide className={styles['swiper-slide']}>
+            <img src={java_logo} alt="Java" />
+          </SwiperSlide>
+          <SwiperSlide className={styles['swiper-slide']}>
+            <img src={js_logo} alt="JavaScript" />
+          </SwiperSlide>
+          <SwiperSlide className={styles['swiper-slide']}>
+            <img src={ts_logo} alt="TypeScript" />
+          </SwiperSlide>
+          <SwiperSlide className={styles['swiper-slide']}>
+            <img src={sql_logo} alt="SQL" />
+          </SwiperSlide>
+          <SwiperSlide className={styles['swiper-slide']}>
+            <img src={react_logo} alt="React" />
+          </SwiperSlide>
+          <SwiperSlide className={styles['swiper-slide']}>
+            <img src={flask_logo} alt="Flask" />
+          </SwiperSlide>
+          <SwiperSlide className={styles['swiper-slide']}>
+            <img src={docker_logo} alt="Docker" />
+          </SwiperSlide>
+          <SwiperSlide className={styles['swiper-slide']}>
+            <img src={git_logo} alt="Git" />
+          </SwiperSlide>
+          <SwiperSlide className={styles['swiper-slide']}>
+            <img src={sklearn_logo} alt="scikit-learn" />
+          </SwiperSlide>
+        </Swiper>
       </div>
     </section>
   );

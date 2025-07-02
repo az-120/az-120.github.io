@@ -56,14 +56,6 @@
     box-shadow: 0 2px 8px rgba(18, 28, 53, 0.05);
 }
 
-.swiper-pagination {
-    position: relative;
-    width: auto !important;
-    bottom: 0.5rem;
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-}
 
 @media (max-width: 900px) {
     .swiper_container {
