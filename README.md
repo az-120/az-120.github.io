@@ -2,4 +2,4 @@
 
 Created using ReactJS (Vite), HTML, CSS.
 
-TODO: fix skills swiper, project card text overlay, add experience timeline
+TODO: experience timeline, project cursor hover, font
