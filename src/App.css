@@ -55,12 +55,13 @@ h2,
 h3,
 .typewriter,
 p {
-  font-family: "Spectral", monospace;
+  font-family: "Electrolize", monospace;
 }
 
 h1 {
   text-transform: uppercase;
-  font-family: 'Spectral', sans-serif;
+  font-family: 'Electrolize', monospace;
+  font-weight: 200;
   font-size: 40px;
   padding-top: 50px;
 }

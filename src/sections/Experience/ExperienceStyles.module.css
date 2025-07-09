@@ -1,6 +1,5 @@
 .container {
     gap: 100px;
-    /* figure out what this does */
     min-height: 100dvh;
     scroll-snap-align: start;
     scroll-snap-stop: always;

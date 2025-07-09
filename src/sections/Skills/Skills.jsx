@@ -31,15 +31,14 @@ function Skills() {
   return (
     <section id="skills" className={styles.container}>
       <h1 className="sectionTitle">Skills</h1>
-      <div style={{ width: '100%', maxWidth: 900, margin: '0 auto' }}>
+      <div>
         <Swiper
-          effect="coverflow"
+          effect={"coverflow"}
           grabCursor={true}
           centeredSlides={true}
           loop={true}
-          slidesPerView={3}
+          slidesPerView={'auto'}
           coverflowEffect={coverflowEffect}
-          pagination={{ el: '.swiper-pagination', clickable: true }}
           modules={[EffectCoverflow, Pagination, Navigation]}
         >
           <SwiperSlide className={styles['swiper-slide']}>
