@@ -15,7 +15,7 @@
     max-width: 200px;
   }
 
-  span {
+  .socialLinks {
     display: flex;
     gap: 25px;
     justify-content: center;

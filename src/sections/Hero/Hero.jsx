@@ -35,19 +35,12 @@ function Hero() {
         <h1>Arthur Zhao</h1>
         <h2>I'm a...</h2>
         <div className="typewriter">
-          <span
-            style={{
-              fontWeight: "bold",
-              display: "inline",
-              whiteSpace: "nowrap",
-            }}>
-            &nbsp;
+          <span>
             {text}
-            {/* <Cursor /> */}
+            <Cursor />
           </span>
         </div>
-
-        <span>
+        <span className={styles.socialLinks}>
           <a href="https://linkedin.com/in/arthurdezhao" target="_blank">
             <img src={linkedinDark} alt="LinkedIn Icon" />
           </a>
