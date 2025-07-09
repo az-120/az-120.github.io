@@ -35,10 +35,12 @@ function Experience() {
               <span className={styles.date}>{exp.date}</span>
               <p>{exp.description}</p>
             </div>
+            &nbsp;
           </div>
         ))}
       </div>
     </section>
+
   );
 }
 
