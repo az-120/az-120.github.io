@@ -131,7 +131,6 @@
   object-fit: contain;
 }
 
-/* Desktop styles */
 @media (min-width: 640px) {
   .timelineLineMobile {
     display: none;
@@ -163,7 +162,6 @@
   }
 }
 
-/* Large screen adjustments */
 @media (min-width: 1024px) {
   .timelineContainer {
     gap: 3rem;
@@ -176,25 +174,4 @@
 
 .date {
   font-family: "Electrolize", monospace;
-}
-
-/* Color classes */
-.colorRed {
-  background-color: #ef4444;
-}
-
-.colorBlue {
-  background-color: #3b82f6;
-}
-
-.colorYellow {
-  background-color: #eab308;
-}
-
-.colorPurple {
-  background-color: #a855f7;
-}
-
-.colorOrange {
-  background-color: #f97316;
 }
