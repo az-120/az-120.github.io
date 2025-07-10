@@ -45,7 +45,7 @@ const experiences = [
   },
   {
     id: 5,
-    title: "Software Developee",
+    title: "Software Developer",
     company: "Styl",
     date: "Oct 2023 - Apr 2024",
     description: "Web scraping and data processing",
