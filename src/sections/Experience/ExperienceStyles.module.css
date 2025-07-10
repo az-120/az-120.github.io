@@ -1,13 +1,200 @@
 .container {
-    gap: 100px;
-    min-height: 100dvh;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 100%;
+  gap: 100px;
+  min-height: 100dvh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 2rem;
+}
+
+.timelineContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding-left: 8rem;
+}
+
+.timelineItem {
+  display: flex;
+  margin: 1rem 0;
+  position: relative;
+  gap: 3rem;
+}
+
+.timelineLine {
+  width: 2px;
+  height: 24px;
+  opacity: 0.6;
+  position: absolute;
+}
+
+.timelineLineMobile {
+  transform: translateX(80px) translateY(224px);
+}
+
+.timelineLineDesktop {
+  transform: translateX(320px) translateY(224px);
+  display: none;
+}
+
+.timelineHeader {
+  display: none;
+  align-items: flex-start;
+  width: 9rem;
+  padding-top: 2px;
+  position: relative;
+}
+
+.timelineDate {
+  width: 100%;
+  color: #6b7280;
+  font-family: "Electrolize", monospace;
+  font-size: 14px;
+}
+
+.timelineIcon {
+  width: 50px;
+  height: 50px;
+  padding: 4px;
+  border-radius: 8px;
+  z-index: 20;
+  background-color: white;
+  object-fit: contain;
+}
+
+.timelineCard {
+  border: 1px solid #4b5563;
+  border-radius: 8px;
+  padding: 32px;
+  background-color: #1f2937;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+  position: relative;
+}
+
+.timelineTitle {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  font-family: "Electrolize", monospace;
+}
+
+.timelineCompany {
+  color: #d1d5db;
+  margin-bottom: 24px;
+  font-size: 14px;
+  font-family: "Electrolize", monospace;
+}
+
+.timelineDateMobile {
+  display: inline;
+}
+
+.timelineDescription {
+  margin-bottom: 16px;
+  text-align: middle;
+  font-family: "Electrolize", monospace;
+  font-size: 16px;
+  padding-bottom: 2rem;
+}
+
+.timelineTech {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  justify-content: center;
+  gap: 4px;
+}
+
+.techTag {
+  background-color: #111827;
+  border-radius: 12px;
+  padding: 4px 8px;
+  font-size: 14px;
+  margin: 2px;
+  font-family: "Electrolize", monospace;
+}
+
+.timelineIconMobile {
+  width: 32px;
+  height: 32px;
+  padding: 4px;
+  border-radius: 8px;
+  z-index: 20;
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  background-color: white;
+  object-fit: contain;
+}
+
+/* Desktop styles */
+@media (min-width: 640px) {
+  .timelineLineMobile {
+    display: none;
+  }
+
+  .timelineLineDesktop {
+    display: block;
+  }
+
+  .timelineHeader {
+    display: flex;
+  }
+
+  .timelineCard {
+    width: 384px;
+  }
+
+  .timelineDateMobile {
+    display: none;
+  }
+
+  .timelineIconMobile {
+    display: none;
+  }
+
+  .timelineCompany {
+    font-size: 12px;
+    margin-bottom: 32px;
+  }
+}
+
+/* Large screen adjustments */
+@media (min-width: 1024px) {
+  .timelineContainer {
+    gap: 3rem;
+  }
+
+  .timelineCard {
+    width: 450px;
+  }
 }
 
 .date {
-    font-family: "Electrolize", monospace;
+  font-family: "Electrolize", monospace;
+}
+
+/* Color classes */
+.colorRed {
+  background-color: #ef4444;
+}
+
+.colorBlue {
+  background-color: #3b82f6;
+}
+
+.colorYellow {
+  background-color: #eab308;
+}
+
+.colorPurple {
+  background-color: #a855f7;
+}
+
+.colorOrange {
+  background-color: #f97316;
 }

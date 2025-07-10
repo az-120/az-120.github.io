@@ -128,8 +128,15 @@ export default function TiltedCard({
   );
 
   return link ? (
-    <a href={link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{ textDecoration: "none" }}
+    >
       {cardContent}
     </a>
-  ) : cardContent;
+  ) : (
+    cardContent
+  );
 }

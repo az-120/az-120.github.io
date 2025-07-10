@@ -43,7 +43,7 @@
     padding: 0 20px;
   }
 
-  .projectsContainer>* {
+  .projectsContainer > * {
     flex: 0 0 calc(33.333% - 14px);
     max-width: calc(33.333% - 14px);
   }
@@ -55,7 +55,7 @@
     padding: 0 30px;
   }
 
-  .projectsContainer>* {
+  .projectsContainer > * {
     flex: 0 0 calc(33.333% - 20px);
     max-width: calc(33.333% - 20px);
   }

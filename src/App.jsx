@@ -3,7 +3,7 @@ import Hero from "./sections/Hero/Hero";
 import Experience from "./sections/Experience/Experience";
 import Projects from "./sections/Projects/Projects";
 import Skills from "./sections/Skills/Skills";
-import Waves from './common/Waves';
+import Waves from "./common/Waves";
 
 function App() {
   return (

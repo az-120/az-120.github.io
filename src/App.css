@@ -3,7 +3,7 @@
   --project-card-bg: #fff;
   --text-color: #fff;
   --form-text-color: #fff;
-  --typewriter-color: #1FF;
+  --typewriter-color: #1ff;
 }
 
 .App {
@@ -60,7 +60,7 @@ p {
 
 h1 {
   text-transform: uppercase;
-  font-family: 'Electrolize', monospace;
+  font-family: "Electrolize", monospace;
   font-weight: 200;
   font-size: 40px;
   padding-top: 50px;
