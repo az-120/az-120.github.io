@@ -27,7 +27,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: visible;
 }
 
 .swiper-slide {
@@ -37,10 +36,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #fff;
-  border-radius: 1rem;
-  box-shadow: 0 4px 24px rgba(18, 28, 53, 0.08);
-  transition: box-shadow 0.2s;
   margin: 1rem 0;
 }
 
@@ -96,6 +91,12 @@
 .skillSlide {
   position: relative;
   display: inline-block;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(18, 28, 53, 0.08);
+  transition: box-shadow 0.2s;
+  width: 100%;
+  height: 100%;
 }
 
 .tooltip {
