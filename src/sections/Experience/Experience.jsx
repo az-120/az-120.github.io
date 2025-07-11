@@ -1,3 +1,4 @@
+import React, {useEffect, useRef} from "react";
 import styles from "./ExperienceStyles.module.css";
 
 import tanium from "../../assets/tanium.png";
@@ -55,15 +56,42 @@ const experiences = [
 ];
 
 function Experience() {
+  const timelineRefs = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(styles.fadeIn);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      }
+    );
+
+    timelineRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section id="experience" className={styles.container}>
       <h1 className="sectionTitle">Experience</h1>
       <div className={styles.timelineContainer}>
-        {experiences.map((element) => {
+        {experiences.map((element, index) => {
           const color = styles.colorWhite;
 
           return (
-            <div key={element.id} className={styles.timelineItem}>
+            <div
+              key={element.id}
+              ref={(el) => (timelineRefs.current[index] = el)}
+              className={styles.timelineItem}>
               <div
                 className={`${color} ${styles.timelineLine} ${styles.timelineLineMobile}`}></div>
               <div

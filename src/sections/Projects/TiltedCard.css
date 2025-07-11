@@ -50,7 +50,6 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2;
   will-change: transform;
   transform: translateZ(30px);
 }
@@ -66,5 +65,6 @@
   font-size: 20px;
   color: #2d2d2d;
   opacity: 0;
-  z-index: 3;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }

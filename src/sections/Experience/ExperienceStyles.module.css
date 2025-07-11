@@ -21,6 +21,30 @@
   margin: 1rem 0;
   position: relative;
   gap: 3rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.timelineItem.fadeIn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timelineItem:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.timelineItem:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.timelineItem:nth-child(3) {
+  transition-delay: 0.2s;
+}
+.timelineItem:nth-child(4) {
+  transition-delay: 0.3s;
+}
+.timelineItem:nth-child(5) {
+  transition-delay: 0.3s;
 }
 
 .timelineLine {

@@ -1,5 +1,5 @@
-import { useRef, useState } from "react";
-import { motion, useMotionValue, useSpring } from "framer-motion";
+import {useRef, useState} from "react";
+import {motion, useMotionValue, useSpring} from "framer-motion";
 import "./TiltedCard.css";
 
 const springValues = {
@@ -82,8 +82,7 @@ export default function TiltedCard({
       }}
       onMouseMove={handleMouse}
       onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
+      onMouseLeave={handleMouseLeave}>
       {showMobileWarning && (
         <div className="tilted-card-mobile-alert">
           This effect is not optimized for mobile. Check on desktop.
@@ -98,8 +97,7 @@ export default function TiltedCard({
           rotateX,
           rotateY,
           scale,
-        }}
-      >
+        }}>
         <motion.img
           src={imageSrc}
           alt={altText}
@@ -119,8 +117,7 @@ export default function TiltedCard({
             y,
             opacity,
             rotate: rotateFigcaption,
-          }}
-        >
+          }}>
           {captionText}
         </motion.figcaption>
       )}
@@ -132,8 +129,7 @@ export default function TiltedCard({
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      style={{ textDecoration: "none" }}
-    >
+      style={{textDecoration: "none"}}>
       {cardContent}
     </a>
   ) : (
