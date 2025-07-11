@@ -1,5 +1,6 @@
 import {useRef, useState} from "react";
 import {motion, useMotionValue, useSpring} from "framer-motion";
+import {createPortal} from "react-dom";
 import "./TiltedCard.css";
 
 const springValues = {
@@ -51,8 +52,8 @@ export default function TiltedCard({
     rotateX.set(rotationX);
     rotateY.set(rotationY);
 
-    x.set(e.clientX - rect.left);
-    y.set(e.clientY - rect.top);
+    x.set(e.clientX + 10);
+    y.set(e.clientY);
 
     const velocityY = offsetY - lastY;
     rotateFigcaption.set(-velocityY * 0.6);
@@ -108,31 +109,39 @@ export default function TiltedCard({
           }}
         />
       </motion.div>
-
-      {showTooltip && (
-        <motion.figcaption
-          className="tilted-card-caption"
-          style={{
-            x,
-            y,
-            opacity,
-            rotate: rotateFigcaption,
-          }}>
-          {captionText}
-        </motion.figcaption>
-      )}
     </figure>
   );
 
-  return link ? (
-    <a
-      href={link}
-      target="_blank"
-      rel="noopener noreferrer"
-      style={{textDecoration: "none"}}>
-      {cardContent}
-    </a>
-  ) : (
-    cardContent
+  const captionPortal =
+    showTooltip &&
+    createPortal(
+      <motion.div
+        className="tilted-card-caption"
+        style={{
+          x,
+          y,
+          opacity,
+          rotate: rotateFigcaption,
+        }}>
+        {captionText}
+      </motion.div>,
+      document.body
+    );
+
+  return (
+    <>
+      {link ? (
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{textDecoration: "none"}}>
+          {cardContent}
+        </a>
+      ) : (
+        cardContent
+      )}
+      {captionPortal}
+    </>
   );
 }

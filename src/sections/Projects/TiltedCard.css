@@ -37,9 +37,7 @@
 }
 
 .tilted-card-img {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   object-fit: cover;
   border-radius: 15px;
   will-change: transform;
@@ -47,16 +45,14 @@
 }
 
 .tilted-card-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   will-change: transform;
   transform: translateZ(30px);
 }
 
 .tilted-card-caption {
   pointer-events: none;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   border-radius: 4px;
@@ -65,6 +61,6 @@
   font-size: 20px;
   color: #2d2d2d;
   opacity: 0;
-  z-index: 999;
+  z-index: 99;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
