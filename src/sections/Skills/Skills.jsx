@@ -1,6 +1,11 @@
 import React from "react";
 import {Swiper, SwiperSlide} from "swiper/react";
-import {EffectCoverflow, Pagination, Navigation} from "swiper/modules";
+import {
+  EffectCoverflow,
+  Pagination,
+  Navigation,
+  Mousewheel,
+} from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
@@ -48,7 +53,12 @@ function Skills() {
           loop={true}
           slidesPerView={"auto"}
           coverflowEffect={coverflowEffect}
-          modules={[EffectCoverflow, Pagination, Navigation]}>
+          mousewheel={{
+            forceToAxis: true,
+            sensitivity: 1,
+            releaseOnEdges: true,
+          }}
+          modules={[EffectCoverflow, Pagination, Navigation, Mousewheel]}>
           <SwiperSlide className={styles["swiper-slide"]}>
             <SkillSlide src={python_logo} alt="Python" label="Python" />
           </SwiperSlide>

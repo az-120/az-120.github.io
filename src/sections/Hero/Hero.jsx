@@ -1,5 +1,5 @@
 import React from "react";
-import { useTypewriter, Cursor } from "react-simple-typewriter";
+import {useTypewriter, Cursor} from "react-simple-typewriter";
 import styles from "./HeroStyles.module.css";
 import heroImg from "../../assets/hero-img.png";
 import mailDark from "../../assets/mail-dark.svg";
@@ -19,8 +19,6 @@ function Hero() {
     deleteSpeed: 80,
     delaySpeed: 1000,
   });
-
-  console.log(text);
 
   return (
     <section id="hero" className={styles.container}>

@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import {useRef, useEffect} from "react";
 import "./Waves.css";
 
 class Grad {
@@ -82,7 +82,7 @@ class Noise {
     return this.lerp(
       this.lerp(n00, n10, u),
       this.lerp(n01, n11, u),
-      this.fade(y),
+      this.fade(y)
     );
   }
 }
@@ -105,7 +105,7 @@ const Waves = ({
   const containerRef = useRef(null);
   const canvasRef = useRef(null);
   const ctxRef = useRef(null);
-  const boundingRef = useRef({ width: 0, height: 0, left: 0, top: 0 });
+  const boundingRef = useRef({width: 0, height: 0, left: 0, top: 0});
   const noiseRef = useRef(new Noise(Math.random()));
   const linesRef = useRef([]);
   const mouseRef = useRef({
@@ -161,7 +161,6 @@ const Waves = ({
   ]);
 
   useEffect(() => {
-    console.log("Waves mounted");
     const canvas = canvasRef.current;
     const container = containerRef.current;
     ctxRef.current = canvas.getContext("2d");
@@ -173,11 +172,11 @@ const Waves = ({
     }
 
     function setLines() {
-      const { width, height } = boundingRef.current;
+      const {width, height} = boundingRef.current;
       linesRef.current = [];
       const oWidth = width + 200,
         oHeight = height + 30;
-      const { xGap, yGap } = configRef.current;
+      const {xGap, yGap} = configRef.current;
       const totalLines = Math.ceil(oWidth / xGap);
       const totalPoints = Math.ceil(oHeight / yGap);
       const xStart = (width - xGap * totalLines) / 2;
@@ -188,8 +187,8 @@ const Waves = ({
           pts.push({
             x: xStart + xGap * i,
             y: yStart + yGap * j,
-            wave: { x: 0, y: 0 },
-            cursor: { x: 0, y: 0, vx: 0, vy: 0 },
+            wave: {x: 0, y: 0},
+            cursor: {x: 0, y: 0, vx: 0, vy: 0},
           });
         }
         linesRef.current.push(pts);
@@ -214,7 +213,7 @@ const Waves = ({
           const move =
             noise.perlin2(
               (p.x + time * waveSpeedX) * 0.002,
-              (p.y + time * waveSpeedY) * 0.0015,
+              (p.y + time * waveSpeedY) * 0.0015
             ) * 12;
           p.wave.x = Math.cos(move) * waveAmpX;
           p.wave.y = Math.sin(move) * waveAmpY;
@@ -238,11 +237,11 @@ const Waves = ({
           p.cursor.y += p.cursor.vy * 2;
           p.cursor.x = Math.min(
             maxCursorMove,
-            Math.max(-maxCursorMove, p.cursor.x),
+            Math.max(-maxCursorMove, p.cursor.x)
           );
           p.cursor.y = Math.min(
             maxCursorMove,
-            Math.max(-maxCursorMove, p.cursor.y),
+            Math.max(-maxCursorMove, p.cursor.y)
           );
         });
       });
@@ -251,11 +250,11 @@ const Waves = ({
     function moved(point, withCursor = true) {
       const x = point.x + point.wave.x + (withCursor ? point.cursor.x : 0);
       const y = point.y + point.wave.y + (withCursor ? point.cursor.y : 0);
-      return { x: Math.round(x * 10) / 10, y: Math.round(y * 10) / 10 };
+      return {x: Math.round(x * 10) / 10, y: Math.round(y * 10) / 10};
     }
 
     function drawLines() {
-      const { width, height } = boundingRef.current;
+      const {width, height} = boundingRef.current;
       const ctx = ctxRef.current;
       ctx.clearRect(0, 0, width, height);
       ctx.beginPath();
@@ -268,7 +267,7 @@ const Waves = ({
           p1 = moved(p, !isLast);
           const p2 = moved(
             points[idx + 1] || points[points.length - 1],
-            !isLast,
+            !isLast
           );
           ctx.lineTo(p1.x, p1.y);
           if (isLast) ctx.moveTo(p2.x, p2.y);
@@ -328,7 +327,7 @@ const Waves = ({
     frameIdRef.current = requestAnimationFrame(tick);
     window.addEventListener("resize", onResize);
     window.addEventListener("mousemove", onMouseMove);
-    window.addEventListener("touchmove", onTouchMove, { passive: false });
+    window.addEventListener("touchmove", onTouchMove, {passive: false});
 
     return () => {
       window.removeEventListener("resize", onResize);
@@ -353,8 +352,7 @@ const Waves = ({
         overflow: "hidden",
         backgroundColor,
         ...style,
-      }}
-    >
+      }}>
       <canvas ref={canvasRef} className="waves-canvas" />
     </div>
   );
