@@ -7,6 +7,7 @@
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
+  padding: 2rem;
 
   img {
     max-width: 250px;
@@ -52,7 +53,7 @@
 
 @media (width >=1200px) {
   .projectsContainer {
-    gap: 30px;
+    gap: 100px;
     padding: 0 30px;
   }
 
