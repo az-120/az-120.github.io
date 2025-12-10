@@ -53,8 +53,8 @@
 
 @media (width >=1200px) {
   .projectsContainer {
-    gap: 100px;
-    padding: 0 30px;
+    gap: 30px;
+    padding: 0 10px;
   }
 
   .projectsContainer > * {

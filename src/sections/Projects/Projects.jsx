@@ -2,6 +2,7 @@ import styles from "./ProjectsStyles.module.css";
 import TiltedCard from "./TiltedCard";
 
 import personal_website from "../../assets/personal-website.png";
+import hairclip from "../../assets/hairclip.png";
 import BeatTorrent from "../../assets/beat-torrent.png";
 import LLM_ASR from "../../assets/LLM-ASR.png";
 import hate_speech from "../../assets/hatespeech.png";
@@ -12,18 +13,25 @@ function Projects() {
       <h1 className="sectionTitle">Projects</h1>
       <div className={styles.projectsContainer}>
         <TiltedCard
+          imageSrc={hairclip}
+          altText="HairCLIP"
+          captionText="HairCLIP"
+          displayOverlayContent={true}
+          link="https://github.com/az-120/HairCLIP"
+        />
+        <TiltedCard
+          imageSrc={BeatTorrent}
+          altText="BeatTorrent"
+          captionText="BeatTorrent"
+          displayOverlayContent={true}
+          link="https://github.com/az-120/beat-torrent"
+        />
+        <TiltedCard
           imageSrc={personal_website}
           altText="Personal Website"
           captionText="Personal Website"
           displayOverlayContent={true}
           link="https://github.com/az-120/az-120.github.io"
-        />
-        <TiltedCard
-          imageSrc={BeatTorrent}
-          altText="Distributed P2P Synchronized Music Streaming Player"
-          captionText="Distributed P2P Synchronized Music Streaming Player"
-          displayOverlayContent={true}
-          link="https://github.com/az-120/beat-torrent"
         />
         <TiltedCard
           imageSrc={LLM_ASR}
