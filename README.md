@@ -1,6 +1,6 @@
 # Arthur Zhao Personal Portfolio Website
 
-az-120.github.io
+[Link](az-120.github.io)
 
 Created using ReactJS (Vite), HTML, CSS
 
