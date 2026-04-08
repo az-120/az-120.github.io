@@ -4,6 +4,7 @@ import TiltedCard from "./TiltedCard";
 import personal_website from "../../assets/personal-website.png";
 import hairclip from "../../assets/hairclip.png";
 import BeatTorrent from "../../assets/beat-torrent.png";
+import TupperAware from "../../assets/tupperawarecover.png";
 import LLM_ASR from "../../assets/LLM-ASR.png";
 import hate_speech from "../../assets/hatespeech.png";
 
@@ -25,6 +26,13 @@ function Projects() {
           captionText="BeatTorrent"
           displayOverlayContent={true}
           link="https://github.com/az-120/beat-torrent"
+        />
+        <TiltedCard
+          imageSrc={TupperAware}
+          altText="TupperAware"
+          captionText="TupperAware"
+          displayOverlayContent={true}
+          link="https://github.com/az-120/tupperaware"
         />
         <TiltedCard
           imageSrc={personal_website}
