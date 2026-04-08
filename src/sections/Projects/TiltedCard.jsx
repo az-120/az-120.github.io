@@ -125,7 +125,7 @@ export default function TiltedCard({
         }}>
         {captionText}
       </motion.div>,
-      document.body
+      document.body,
     );
 
   return (
