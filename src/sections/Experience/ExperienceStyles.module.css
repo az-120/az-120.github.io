@@ -86,7 +86,7 @@
   padding: 4px;
   border-radius: 8px;
   z-index: 20;
-  background-color: white;
+  background-color: transparent;
   object-fit: contain;
 }
 
@@ -153,7 +153,7 @@
   position: absolute;
   left: 16px;
   top: 16px;
-  background-color: white;
+  background-color: transparent;
   object-fit: contain;
 }
 

@@ -2,7 +2,7 @@ import React, {useEffect, useRef} from "react";
 import styles from "./ExperienceStyles.module.css";
 
 import tanium from "../../assets/tanium.png";
-import littlecaesars from "../../assets/little-caesars.jpeg";
+import littlecaesars from "../../assets/little-caesars.png";
 import bigideaslab from "../../assets/big-ideas-lab.jpeg";
 import styl from "../../assets/styl.jpeg";
 import tiktok from "../../assets/tiktok-logo.png";

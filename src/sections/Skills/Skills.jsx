@@ -14,6 +14,7 @@ import "swiper/css/navigation";
 import styles from "./SkillsStyles.module.css";
 
 import python_logo from "../../assets/python-logo.png";
+import golang_logo from "../../assets/golang-logo.png";
 import java_logo from "../../assets/java-logo.png";
 import js_logo from "../../assets/javascript-logo.png";
 import ts_logo from "../../assets/typescript-logo.png";
@@ -61,6 +62,9 @@ function Skills() {
           modules={[EffectCoverflow, Pagination, Navigation, Mousewheel]}>
           <SwiperSlide className={styles["swiper-slide"]}>
             <SkillSlide src={python_logo} alt="Python" label="Python" />
+          </SwiperSlide>
+          <SwiperSlide className={styles["swiper-slide"]}>
+            <SkillSlide src={golang_logo} alt="Go" label="Go" />
           </SwiperSlide>
           <SwiperSlide className={styles["swiper-slide"]}>
             <SkillSlide src={java_logo} alt="Java" label="Java" />
