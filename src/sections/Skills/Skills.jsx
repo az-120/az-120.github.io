@@ -5,6 +5,7 @@ import {
   Pagination,
   Navigation,
   Mousewheel,
+  FreeMode,
 } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -53,13 +54,25 @@ function Skills() {
           centeredSlides={true}
           loop={true}
           slidesPerView={"auto"}
+          freeMode={{
+            enabled: true,
+            momentum: true,
+            momentumBounce: false,
+            sticky: false,
+          }}
           coverflowEffect={coverflowEffect}
           mousewheel={{
             forceToAxis: true,
             sensitivity: 1,
             releaseOnEdges: true,
           }}
-          modules={[EffectCoverflow, Pagination, Navigation, Mousewheel]}>
+          modules={[
+            EffectCoverflow,
+            Pagination,
+            Navigation,
+            Mousewheel,
+            FreeMode,
+          ]}>
           <SwiperSlide className={styles["swiper-slide"]}>
             <SkillSlide src={python_logo} alt="Python" label="Python" />
           </SwiperSlide>

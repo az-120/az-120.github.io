@@ -60,6 +60,7 @@
     .hero {
       max-width: 350px;
       width: 350px;
+      transform: translateY(-35px);
     }
   }
 }
