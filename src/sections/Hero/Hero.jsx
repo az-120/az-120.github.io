@@ -12,7 +12,7 @@ function Hero() {
       "Software Engineer",
       "Data Driven Developer",
       "ML Enthusiast",
-      "CS Student @ Duke",
+      "Duke CS Grad",
     ],
     loop: true,
     typeSpeed: 100,

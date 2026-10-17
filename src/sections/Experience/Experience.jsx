@@ -5,8 +5,18 @@ import tanium from "../../assets/tanium.png";
 import littlecaesars from "../../assets/little-caesars.jpeg";
 import bigideaslab from "../../assets/big-ideas-lab.jpeg";
 import styl from "../../assets/styl.jpeg";
+import tiktok from "../../assets/tiktok-logo.png";
 
 const experiences = [
+  {
+    id: 0,
+    title: "Software Engineer",
+    company: "TikTok",
+    date: "Jun 2026 - Present",
+    description: "Backend development for Accounts/IAM",
+    tech: ["Go", "System Design", "Security"],
+    icon: tiktok,
+  },
   {
     id: 1,
     title: "Software Engineering Intern",
@@ -14,7 +24,7 @@ const experiences = [
     date: "Jun 2025 - Aug 2025",
     description:
       "External AWS S3 cloud integration, UI & user flow improvements",
-    tech: ["TypeScript", "React", "AWS S3"],
+    tech: ["TypeScript", "React"],
     icon: tanium,
   },
   {
@@ -32,7 +42,7 @@ const experiences = [
     company: "Little Caesars",
     date: "Sep 2024 - Dec 2024",
     description: "ETL pipelines & data validation orchestrations",
-    tech: ["Python", "SQL", "Spark", "Databricks"],
+    tech: ["Python", "SQL", "Spark"],
     icon: littlecaesars,
   },
   {
@@ -41,7 +51,7 @@ const experiences = [
     company: "Little Caesars",
     date: "Jun 2024 - Aug 2024",
     description: "ML models for menu item predictions",
-    tech: ["Python", "SQL", "Spark", "PowerBI"],
+    tech: ["Python", "SQL", "Spark"],
     icon: littlecaesars,
   },
   {
@@ -50,7 +60,7 @@ const experiences = [
     company: "Styl",
     date: "Oct 2023 - Apr 2024",
     description: "Web scraping and data processing",
-    tech: ["Python", "Selenium", "Excel"],
+    tech: ["Python", "Excel"],
     icon: styl,
   },
 ];
@@ -70,7 +80,7 @@ function Experience() {
       {
         threshold: 0.1,
         rootMargin: "0px 0px -50px 0px",
-      }
+      },
     );
 
     timelineRefs.current.forEach((ref) => {

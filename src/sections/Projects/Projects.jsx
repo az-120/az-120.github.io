@@ -6,7 +6,6 @@ import hairclip from "../../assets/hairclip.png";
 import BeatTorrent from "../../assets/beat-torrent.png";
 import TupperAware from "../../assets/tupperawarecover.png";
 import LLM_ASR from "../../assets/LLM-ASR.png";
-import hate_speech from "../../assets/hatespeech.png";
 
 function Projects() {
   return (
@@ -47,13 +46,6 @@ function Projects() {
           captionText="Improving ASR with LLM on accented speech"
           displayOverlayContent={true}
           link="https://github.com/az-120/LLM-ASR"
-        />
-        <TiltedCard
-          imageSrc={hate_speech}
-          altText="ML Hate Speech Detector"
-          captionText="ML Hate Speech Detector"
-          displayOverlayContent={true}
-          link="https://github.com/az-120/HateSpeechDetector/tree/main"
         />
       </div>
     </section>
